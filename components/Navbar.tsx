@@ -72,7 +72,7 @@ export default function Navbar() {
         </Link>
 
         <Link
-          href="#"
+          href="/categories"
           onClick={() => setOpen(false)}
           className="text-gray-700 hover:text-orange-500"
         >
