@@ -36,7 +36,7 @@ export default function RecipeSection({ search }: Props) {
     .slice(0, 3);
 
   return (
-    <section className="px-4 md:px-10 py-10 md:py-20">
+    <section id="popular-recipes" className="px-4 md:px-10 py-10 md:py-20">
       {/* RECIPESECTION HEADER */}
       <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
         Popular Recipes
@@ -67,24 +67,6 @@ export default function RecipeSection({ search }: Props) {
               No recipe found.
             </p>
           )}
-
-          {/* <RecipeCard
-          title="Jellof Rice"
-          image="/jellof-rice-img.jpg"
-          description="Nigeria's most loved party rice"
-        />
-
-        <RecipeCard
-          title="Egwusi Soup"
-          image="/egwusi-soup-img.jpg"
-          description="Rich melon soup with vegetables and meat"
-        />
-
-        <RecipeCard
-          title="Suya"
-          image="/suya-img.jpg"
-          description="Spicy grilled street meat"
-        /> */}
         </div>
       )}
     </section>

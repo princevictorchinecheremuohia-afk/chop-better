@@ -16,7 +16,12 @@ export default function RecipeCard({
   return (
     <div className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition">
       {/* RECIPECARD IMAGE */}
-      <img src={image} className="w-full h-60 object-cover" />
+      <div className="overflow-hidden">
+        <img
+          src={image}
+          className="w-full h-60 object-cover hover:scale-105 transition duration-300"
+        />
+      </div>
 
       {/* RECIPECARD CONTENT */}
       <div className="p-4">

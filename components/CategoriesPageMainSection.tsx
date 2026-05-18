@@ -32,11 +32,6 @@ export default function CategoriesPageMainSection() {
 
   return (
     <section className="px-4 md:px-10 py-10 md:py-20 pb-20 bg-orange-50">
-      {/* CATEGORY HEADER */}
-      <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
-        Browse Categories
-      </h2>
-
       {loading ? (
         <div className="flex justify-center py-20">
           <h2 className="text-2xl font-semibold text-orange-500 animate-pulse">
@@ -45,7 +40,7 @@ export default function CategoriesPageMainSection() {
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {categories.slice(0, 3).map((category) => (
+          {categories.map((category) => (
             <div
               key={category.idCategory}
               className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition cursor-pointer"

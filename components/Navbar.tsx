@@ -28,7 +28,7 @@ export default function Navbar() {
         <Link href="/recipes" className="hover:text-orange-500">
           Recipes
         </Link>
-        <Link href="#" className="hover:text-orange-500">
+        <Link href="/categories" className="hover:text-orange-500">
           Categories
         </Link>
       </div>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type HeroSectionProps = {
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
@@ -28,16 +30,28 @@ export default function HeroSection({ search, setSearch }: HeroSectionProps) {
           className="w-full md:w-[500px] px-5 py-4 rounded-2xl border border-gray-200 outline-none focus:border-orange-500"
         />
 
-        <button className="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition cursor-pointer">
+        <button
+          className="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition cursor-pointer"
+          onClick={() => {
+            const section = document.getElementById("popular-recipes");
+
+            section?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+        >
           Search
         </button>
       </div>
 
       {/* CTA Button */}
       <div className="mt-6">
-        <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition cursor-pointer">
+        <Link
+          href="/recipes"
+          className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition cursor-pointer"
+        >
           Explore Recipes
-        </button>
+        </Link>
       </div>
     </section>
   );
