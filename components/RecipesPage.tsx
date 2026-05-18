@@ -5,6 +5,7 @@ import { useState } from "react";
 import Navbar from "./Navbar";
 import RecipesHeroSection from "./RecipesHeroSection";
 import RecipesPageMainSection from "./RecipesPageMainSection";
+import Footer from "./Footer";
 
 export default function RecipesPage() {
   const [search, setSearch] = useState("");
@@ -14,6 +15,7 @@ export default function RecipesPage() {
       <Navbar />
       <RecipesHeroSection search={search} setSearch={setSearch} />
       <RecipesPageMainSection search={search} />
+      <Footer />
     </>
   );
 }

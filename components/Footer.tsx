@@ -1,9 +1,47 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Footer() {
+  const [showButton, setShowButton] = useState(false);
+
+  // SHOW AFTER SCROLL BUTTON
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // SCROLL TO TOP
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <section className="bg-gray-900 text-white px-4 md:px-10 py-10 md:py-20">
+    <section className="relative bg-gray-900 text-white px-4 md:px-10 py-10 md:py-20">
+      {/* SCROLL TO TOP BUTTON */}
+      {showButton && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition z-50"
+        >
+          ↑
+        </button>
+      )}
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div>
           <Link href="/" className="flex items-center">
