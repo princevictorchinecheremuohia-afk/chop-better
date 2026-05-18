@@ -22,7 +22,11 @@ export default function CategoriesPageMainSection() {
 
       const data = await response.json();
 
-      setCategories(data.categories);
+      const shuffled = [...data.categories].sort(() => 0.5 - Math.random());
+
+      setCategories(shuffled);
+
+      // setCategories(data.categories);
 
       setLoading(false);
     }
@@ -39,7 +43,7 @@ export default function CategoriesPageMainSection() {
 
       {loading ? (
         <div className="flex justify-center py-20">
-          <h2 className="text-2xl font-semibold text-orange-500 animate-pulse">
+          <h2 className="text-orange-500 text-lg animate-pulse">
             Loading categories...
           </h2>
         </div>
