@@ -35,7 +35,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Icon */}
       <div
-        className="md:hidden text-2xl cursor-pointer z-50"
+        className="md:hidden text-2xl cursor-pointer z-[100] text-gray-800"
         onClick={() => setOpen(!open)}
       >
         {open ? "✕" : "☰"}

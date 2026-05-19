@@ -31,7 +31,7 @@ export default function HeroSection({ search, setSearch }: HeroSectionProps) {
         />
 
         <button
-          className="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition cursor-pointer"
+          className="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition cursor-pointer w-full sm:w-auto"
           onClick={() => {
             const section = document.getElementById("popular-recipes");
 
@@ -45,14 +45,14 @@ export default function HeroSection({ search, setSearch }: HeroSectionProps) {
       </div>
 
       {/* CTA Button */}
-      <div className="mt-6">
+      {/* <div className="mt-6">
         <Link
           href="/recipes"
           className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition cursor-pointer"
         >
           Explore Recipes
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 }

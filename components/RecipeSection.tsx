@@ -63,9 +63,15 @@ export default function RecipeSection({ search }: Props) {
               />
             ))
           ) : (
-            <p className="text-center text-gray-500 col-span-full">
-              No recipe found.
-            </p>
+            <div className="text-center col-span-full py-10">
+              <h2 className="text-2xl font-bold text-gray-700">
+                "{search}" recipe not found
+              </h2>
+
+              <p className="text-gray-500 mt-2">
+                Try searching another delicious meal.
+              </p>
+            </div>
           )}
         </div>
       )}
